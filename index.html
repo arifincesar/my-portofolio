@@ -48,7 +48,7 @@
     <section class="jumbotron text-center">
       <img src="assets/img/yoo.jpg" alt="Arifin Cesar Priyoga" width="200" class="rounded-circle img-thumbnail" />
       <h1 class="display-4">Arifin Cesar Priyoga</h1>
-      <p class="lead">just simply people</p>
+      <p class="lead"></p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#ffffff"
@@ -304,7 +304,6 @@
 
     <!-- AOS -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-
     <script>
       const galleryImage = document.querySelectorAll(".gallery-img");
 
@@ -314,7 +313,6 @@
         img.dataset.aosDuration = 1000;
       });
     </script>
-
     <script>
       AOS.init({
         // Global settings:
@@ -338,5 +336,19 @@
       });
     </script>
     <!-- END AOS -->
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/TextPlugin.min.js"></script>
+    <script>
+      gsap.from(".jumbotron img", { duration: 1, opacity: 0, rotateY: 360 });
+      gsap.from(".navbar", { duration: 1.5, y: "-100%", opacity: 0, ease: "bounce" });
+      gsap.from(".display-4", { duration: 1, x: -50, opacity: 0, delay: 0.5, ease: "back" });
+    </script>
+    <script>
+      gsap.registerPlugin(TextPlugin);
+      gsap.to(".lead", { duration: 1.5, delay: 1.5, text: "just simply people" });
+    </script>
+    <!-- end GSAP -->
   </body>
 </html>
