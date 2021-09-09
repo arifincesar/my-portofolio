@@ -147,6 +147,75 @@
     </section>
     <!-- End Projects -->
 
+    <!-- Gallery -->
+    <section id="gallery">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col">
+            <h2>Gallery</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-3">
+            <a href="#">
+              <img src="assets/img/yoo.jpg" alt="gallery1" class="img-fluid gallery-img" />
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="#">
+              <img src="assets/img/yoo.jpg" alt="gallery 1" class="img-fluid gallery-img" />
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="#">
+              <img src="assets/img/yoo.jpg" alt="gallery 2" class="img-fluid gallery-img" />
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="#">
+              <img src="assets/img/yoo.jpg" alt="gallery 3" class="img-fluid gallery-img" />
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="#">
+              <img src="assets/img/yoo.jpg" alt="gallery 4" class="img-fluid gallery-img" />
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="#">
+              <img src="assets/img/yoo.jpg" alt="gallery 5" class="img-fluid gallery-img" />
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="#">
+              <img src="assets/img/yoo.jpg" alt="gallery 6" class="img-fluid gallery-img" />
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="#">
+              <img src="assets/img/yoo.jpg" alt="gallery 7" class="img-fluid gallery-img" />
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="#">
+              <img src="assets/img/yoo.jpg" alt="gallery 8" class="img-fluid gallery-img" />
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="#">
+              <img src="assets/img/yoo.jpg" alt="gallery 9" class="img-fluid gallery-img" />
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="#">
+              <img src="assets/img/yoo.jpg" alt="gallery 10" class="img-fluid gallery-img" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Gallery -->
+
     <!-- Contact -->
     <section id="contact">
       <div class="container">
@@ -235,6 +304,17 @@
 
     <!-- AOS -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <script>
+      const galleryImage = document.querySelectorAll(".gallery-img");
+
+      galleryImage.forEach((img, i) => {
+        img.dataset.aos = "fade-down";
+        img.dataset.aosDelay = i * 100;
+        img.dataset.aosDuration = 1000;
+      });
+    </script>
+
     <script>
       AOS.init({
         // Global settings:
